@@ -10,7 +10,17 @@ var makeHashTable = function() {
 
       insert: function(key, value) {
         //your code is here
+
         this._storage[hashFn(key, max)] = value;
+        for (var i = 0; i < this._storage.length; i++) {
+          if(this._storage[hashFn(key, max)]===this._storage[i]){
+            var x=[];
+            this._storage.push(x);
+            x.push(key,value);
+
+        }
+        }
+        
     }
   }
 };
